@@ -104,8 +104,8 @@ GameObject:
   - component: {fileID: 5633037430728815467}
   - component: {fileID: 5633037430728815477}
   - component: {fileID: 5633037430728815478}
-  - component: {fileID: 5633037430728815465}
   - component: {fileID: 5633037430728815464}
+  - component: {fileID: 4349683574416947733}
   m_Layer: 6
   m_Name: Abyssal Eye
   m_TagString: Untagged
@@ -127,7 +127,7 @@ Transform:
   m_Children:
   - {fileID: 5633037430218835715}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5633037430728815467
 SpriteRenderer:
@@ -243,23 +243,6 @@ CircleCollider2D:
   m_Offset: {x: 0.07674563, y: -0.059428692}
   serializedVersion: 2
   m_Radius: 0.39534187
---- !u!114 &5633037430728815465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5633037430728815479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c93781d8fc93214592a5ccd33f92db8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  lineOfSite: 10
-  attackRange: 1.5
-  AttackRate: 2
-  animator: {fileID: 5633037430728815464}
 --- !u!95 &5633037430728815464
 Animator:
   serializedVersion: 5
@@ -280,3 +263,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &4349683574416947733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5633037430728815479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab43d706324dd544ca6778aca6f43dbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  lineOfSite: 10
+  attackRange: 1.6
+  animator: {fileID: 5633037430728815464}
+  AttackRate: 1

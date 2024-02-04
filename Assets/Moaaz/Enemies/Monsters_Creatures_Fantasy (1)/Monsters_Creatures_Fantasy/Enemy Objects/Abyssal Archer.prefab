@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7068620442195303278}
   - component: {fileID: 7068620442195303279}
   - component: {fileID: 7068620442195303272}
-  - component: {fileID: 7068620442195303273}
+  - component: {fileID: 1743788628187140034}
   m_Layer: 0
   m_Name: Abyssal Archer
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   m_Children:
   - {fileID: 7068620442866744078}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7068620442195303277
 SpriteRenderer:
@@ -181,7 +181,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &7068620442195303273
+--- !u!114 &1743788628187140034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,14 +190,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7068620442195303274}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3ac67040a39441468e40fba1685af54, type: 3}
+  m_Script: {fileID: 11500000, guid: 5869ef362afbbb64588925494d0ebb73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
   lineOfSite: 20
   attackRange: 10
   animator: {fileID: 7068620442195303272}
-  AttackRate: 1
+  AttackRate: 0.75
   BulletObject: {fileID: 5100676856936350228, guid: 13b77b0825ac5754488efddb4757d29f, type: 3}
   BulletCoordinates: {fileID: 7068620442866744079}
 --- !u!1 &7068620442866744079

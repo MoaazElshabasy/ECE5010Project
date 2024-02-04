@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5957820097806781566}
   - component: {fileID: 5957820097806781565}
   - component: {fileID: 5957820097806781564}
-  - component: {fileID: 5957820097806781567}
+  - component: {fileID: 2781859363045068430}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   - {fileID: 5957820099207931565}
   - {fileID: 5957820099191636914}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &5957820097806781565
 Rigidbody2D:
@@ -84,7 +84,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &5957820097806781567
+--- !u!114 &2781859363045068430
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,13 +93,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5957820097806781563}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223e0a5b18b709d49b354f00c563dd90, type: 3}
+  m_Script: {fileID: 11500000, guid: ab43d706324dd544ca6778aca6f43dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
   lineOfSite: 10
   attackRange: 2.5
   animator: {fileID: 5957820097806781564}
+  AttackRate: 1
 --- !u!1 &5957820099009026700
 GameObject:
   m_ObjectHideFlags: 0

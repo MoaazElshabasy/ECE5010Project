@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMeleeDamage : MonoBehaviour
+public class MeleeEnemyDamage : MonoBehaviour
 {
     public int damage;
     public PlayerStatus status;

@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6013144042091181112}
   - component: {fileID: 6013144042091181113}
   - component: {fileID: 6013144042091181114}
-  - component: {fileID: 6013144042091181115}
+  - component: {fileID: 7163664359079820331}
   m_Layer: 0
   m_Name: Eye Ball
   m_TagString: Untagged
@@ -60,7 +60,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6013144042091181092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.105067, y: 3.574977, z: -0.049440622}
+  m_LocalPosition: {x: -10.6, y: 7.65, z: -0.049440622}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -202,7 +202,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.517836}
   serializedVersion: 2
   m_Radius: 0.5154973
---- !u!114 &6013144042091181115
+--- !u!114 &7163664359079820331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,13 +211,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6013144042091181092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0893fc071aab6004794bff49597b7ade, type: 3}
+  m_Script: {fileID: 11500000, guid: 5869ef362afbbb64588925494d0ebb73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   lineOfSite: 10
   attackRange: 5
-  AttackRate: 1
+  animator: {fileID: 6013144042091181112}
+  AttackRate: 0.5
   BulletObject: {fileID: 5100676856936350228, guid: 13b77b0825ac5754488efddb4757d29f, type: 3}
   BulletCoordinates: {fileID: 6013144041246939613}
-  animator: {fileID: 6013144042091181112}

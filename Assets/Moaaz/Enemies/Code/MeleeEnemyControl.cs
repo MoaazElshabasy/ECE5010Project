@@ -2,19 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyingEnemyRange : MonoBehaviour
+public class MeleeEnemyControl : MonoBehaviour
 {
-    // Start is called before the first frame update
     public float speed;
     private Transform player;
     private Transform thisTransform;
     public float lineOfSite;
     public float attackRange;
     private float nextAttackTime;
-    public float AttackRate = 1f;
-    public GameObject BulletObject;
-    public GameObject BulletCoordinates;
     public Animator animator;
+    public float AttackRate = 1f;
+    private bool inRange;
 
     void Start()
     {
@@ -27,20 +25,23 @@ public class FlyingEnemyRange : MonoBehaviour
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
         if (distanceFromPlayer < lineOfSite && distanceFromPlayer > attackRange)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
+            inRange = true;
             animator.SetBool("Move", true);
+            transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
         }
         else if (distanceFromPlayer <= attackRange && nextAttackTime < Time.time)
         {
+            
             animator.SetBool("Move", false);
             animator.SetTrigger("Attack");
             nextAttackTime = Time.time + AttackRate;
-            Instantiate(BulletObject, BulletCoordinates.transform.position, BulletCoordinates.transform.rotation);
-        } else
+        }
+        else
         {
+            inRange = false;
             animator.SetBool("Move", false);
         }
-        Flip();
+        Flip(inRange);
     }
     private void OnDrawGizmosSelected()
     {
@@ -49,15 +50,20 @@ public class FlyingEnemyRange : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 
-    void Flip()
+    void Flip(bool doFlip)
     {
-        if (player.position.x < thisTransform.position.x)
+        if (doFlip)
         {
-            thisTransform.localScale = new Vector3(-1, 1, 1);
-        }
-        else if (player.position.x > thisTransform.position.x)
-        {
-            thisTransform.localScale = new Vector3(1, 1, 1);
-        }
+            if (player.position.x < thisTransform.position.x)
+            {
+                thisTransform.localScale = new Vector3(-1, 1, 1);
+
+            }
+            else if (player.position.x > thisTransform.position.x)
+            {
+                thisTransform.localScale = new Vector3(1, 1, 1);
+            }
+
+        }  
     }
 }

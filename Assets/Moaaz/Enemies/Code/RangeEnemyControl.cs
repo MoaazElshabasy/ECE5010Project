@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyingEnemyMelee : MonoBehaviour
+public class RangeEnemyControl : MonoBehaviour
 {
     public float speed;
     private Transform player;
@@ -11,8 +10,10 @@ public class FlyingEnemyMelee : MonoBehaviour
     public float lineOfSite;
     public float attackRange;
     private float nextAttackTime;
-    public float AttackRate = 1f;
     public Animator animator;
+    public float AttackRate = 0.5f;
+    public GameObject BulletObject;
+    public GameObject BulletCoordinates;
 
     void Start()
     {
@@ -25,15 +26,29 @@ public class FlyingEnemyMelee : MonoBehaviour
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
         if (distanceFromPlayer < lineOfSite && distanceFromPlayer > attackRange)
         {
+            animator.SetBool("Move", true);
             transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
         }
         else if (distanceFromPlayer <= attackRange && nextAttackTime < Time.time)
         {
+            animator.SetBool("Move", false);
             animator.SetTrigger("Attack");
             nextAttackTime = Time.time + AttackRate;
+            Invoke("InstantiateProjectile", AttackRate);
         }
+        else
+        {
+            animator.SetBool("Move", false);
+        }
+
         Flip();
     }
+
+    void InstantiateProjectile()
+    {
+        Instantiate(BulletObject, BulletCoordinates.transform.position, BulletCoordinates.transform.rotation);
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;

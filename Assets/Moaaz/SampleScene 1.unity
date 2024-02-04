@@ -251,7 +251,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &141662606
 GameObject:
@@ -381,7 +381,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &355626894
 GameObject:
@@ -414,6 +414,37 @@ Transform:
   m_Father: {fileID: 1893651603}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &379047775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 379047776}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &379047776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379047775}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.82, y: 2.54, z: -0.600287}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &416133237
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +457,7 @@ GameObject:
   - component: {fileID: 416133239}
   - component: {fileID: 416133238}
   m_Layer: 0
-  m_Name: Main Camera (1)
+  m_Name: 'Main Camera '
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -634,7 +665,38 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1571767381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1571767382}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1571767382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571767381}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.77, y: 2.34, z: -0.600287}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1893651597
 GameObject:
@@ -828,7 +890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893651597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.66, y: 3.14, z: 0.05608856}
+  m_LocalPosition: {x: 1.8, y: 3.84, z: 0.05608856}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -866,15 +928,15 @@ PrefabInstance:
       objectReference: {fileID: 1893651604}
     - target: {fileID: 5633037430728815466, guid: 36a495c7b7980c7468fdcc9e96eaa718, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5633037430728815466, guid: 36a495c7b7980c7468fdcc9e96eaa718, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.14
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 5633037430728815466, guid: 36a495c7b7980c7468fdcc9e96eaa718, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.71
+      value: 31.1
       objectReference: {fileID: 0}
     - target: {fileID: 5633037430728815466, guid: 36a495c7b7980c7468fdcc9e96eaa718, type: 3}
       propertyPath: m_LocalPosition.z
@@ -916,7 +978,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Abyssal Eye
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5633037430728815465, guid: 36a495c7b7980c7468fdcc9e96eaa718, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -929,21 +992,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2781859363045068430, guid: 3b08352959b90c641a48e873e6fbb901, type: 3}
+      propertyPath: attackRange
+      value: 2.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5957820097806781563, guid: 3b08352959b90c641a48e873e6fbb901, type: 3}
       propertyPath: m_Name
       value: Goblin
       objectReference: {fileID: 0}
     - target: {fileID: 5957820097806781566, guid: 3b08352959b90c641a48e873e6fbb901, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5957820097806781566, guid: 3b08352959b90c641a48e873e6fbb901, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.13
+      value: 57.11
       objectReference: {fileID: 0}
     - target: {fileID: 5957820097806781566, guid: 3b08352959b90c641a48e873e6fbb901, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.9
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 5957820097806781566, guid: 3b08352959b90c641a48e873e6fbb901, type: 3}
       propertyPath: m_LocalPosition.z
@@ -981,7 +1048,8 @@ PrefabInstance:
       propertyPath: status
       value: 
       objectReference: {fileID: 1893651604}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5957820097806781567, guid: 3b08352959b90c641a48e873e6fbb901, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1000,11 +1068,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6013144042091181118, guid: 4728f0b2ab2a02040b6b5c11f0be9298, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6013144042091181118, guid: 4728f0b2ab2a02040b6b5c11f0be9298, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.5
+      value: -12.2
       objectReference: {fileID: 0}
     - target: {fileID: 6013144042091181118, guid: 4728f0b2ab2a02040b6b5c11f0be9298, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1055,17 +1123,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7068620442195303273, guid: f5aa7ef40780ba441916cb6cea020771, type: 3}
+      propertyPath: AttackRate
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 7068620442195303274, guid: f5aa7ef40780ba441916cb6cea020771, type: 3}
       propertyPath: m_Name
       value: Abyssal Archer
       objectReference: {fileID: 0}
     - target: {fileID: 7068620442195303276, guid: f5aa7ef40780ba441916cb6cea020771, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7068620442195303276, guid: f5aa7ef40780ba441916cb6cea020771, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.56
+      value: 43.9
       objectReference: {fileID: 0}
     - target: {fileID: 7068620442195303276, guid: f5aa7ef40780ba441916cb6cea020771, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1111,7 +1183,12 @@ PrefabInstance:
       propertyPath: m_AngularDrag
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7068620442195303279, guid: f5aa7ef40780ba441916cb6cea020771, type: 3}
+      propertyPath: m_GravityScale
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7068620442195303273, guid: f5aa7ef40780ba441916cb6cea020771, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
