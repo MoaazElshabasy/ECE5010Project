@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 45631774}
   - component: {fileID: 45631773}
   - component: {fileID: 45631772}
+  - component: {fileID: 45631775}
   m_Layer: 0
   m_Name: Mossy - TileSet_23 (4)
   m_TagString: Untagged
@@ -253,6 +254,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &45631775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45631771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 723cc0e8403f2ce4cad480930ab4771a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEnabled: 1
 --- !u!1 &141662606
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +562,7 @@ GameObject:
   - component: {fileID: 1194186005}
   - component: {fileID: 1194186004}
   - component: {fileID: 1194186003}
+  - component: {fileID: 1194186006}
   m_Layer: 0
   m_Name: Mossy - TileSet_21 (4)
   m_TagString: Untagged
@@ -587,7 +602,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.7658576, y: -0.5008503}
+  m_Offset: {x: 0.7658576, y: -0.51180094}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 1}
@@ -598,7 +613,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.51628494, y: 0.6895105}
+  m_Size: {x: 0.51628494, y: 0.6676094}
   m_EdgeRadius: 0
 --- !u!212 &1194186004
 SpriteRenderer:
@@ -667,6 +682,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1194186006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194186002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4107ec079deee3d4b9a60f509da78ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1571767381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,7 +1164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7068620442195303276, guid: f5aa7ef40780ba441916cb6cea020771, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.62
+      value: -29.3
       objectReference: {fileID: 0}
     - target: {fileID: 7068620442195303276, guid: f5aa7ef40780ba441916cb6cea020771, type: 3}
       propertyPath: m_LocalPosition.y
