@@ -21,7 +21,7 @@ public class DisableEnableObject : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             isEnabled = !isEnabled;
             if (spriteRenderer != null)

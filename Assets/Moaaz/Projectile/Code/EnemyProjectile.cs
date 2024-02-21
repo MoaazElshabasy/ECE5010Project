@@ -28,7 +28,7 @@ public class EnemyProjectile : MonoBehaviour
             player.recieveDamage(damage);
         }
         //Instantiate(impactEffect, transform.position, Quaternion.identity);
-        Debug.Log(hitInfo.name);
+        //Debug.Log(hitInfo.name);
 
         Destroy(gameObject);
 

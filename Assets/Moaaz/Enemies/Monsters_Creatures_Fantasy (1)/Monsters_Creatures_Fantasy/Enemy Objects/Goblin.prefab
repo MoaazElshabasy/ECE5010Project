@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5957820097806781565}
   - component: {fileID: 5957820097806781564}
   - component: {fileID: 2781859363045068430}
+  - component: {fileID: 4039748164675920702}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Untagged
@@ -101,6 +102,21 @@ MonoBehaviour:
   attackRange: 2.5
   animator: {fileID: 5957820097806781564}
   AttackRate: 1
+--- !u!114 &4039748164675920702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5957820097806781563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719c72c8b469cd84d96abb384ea81ec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  health: 0
+  animator: {fileID: 5957820097806781564}
 --- !u!1 &5957820099009026700
 GameObject:
   m_ObjectHideFlags: 0

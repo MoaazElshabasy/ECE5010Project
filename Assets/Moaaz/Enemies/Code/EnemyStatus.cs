@@ -1,36 +1,26 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStatus : MonoBehaviour
+public class EnemyStatus : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public int health;
+    public float maxHealth = 100f;
+    public float health;
     public Animator animator;
     bool isDead = false;
-
 
     private void Start()
     {
         health = maxHealth;
     }
-    public void recieveDamage(int damage)
+    public void recieveDamage(float damage)
     {
         health -= damage;
-        animator.SetTrigger("Hurt");
+
         if (health <= 0)
         {
-                Die();   
-        }
-    }
-
-    public void recieveHealing(int healing)
-    {
-        health += healing;
-        if (health > maxHealth)
-        {
-            health = maxHealth;
+             health = 0;
+             Die();
         }
     }
 
@@ -51,8 +41,12 @@ public class PlayerStatus : MonoBehaviour
                 Destroy(component);
             }
         }
-
+        Invoke("disappear", 2);
+        
+    }
+    void disappear()
+    {
+        Destroy(gameObject);
     }
 
 }
-
