@@ -70,9 +70,7 @@ public class EnemyStatus : MonoBehaviour
     {
 
         objectRenderer.material.color = targetColor;
-
         yield return new WaitForSeconds(duration);
-
         objectRenderer.material.color = originalColor;
     }
 
