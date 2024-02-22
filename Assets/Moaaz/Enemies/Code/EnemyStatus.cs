@@ -8,15 +8,30 @@ public class EnemyStatus : MonoBehaviour
     public float health;
     public Animator animator;
     bool isDead = false;
+    private Color originalColor;
+    private Renderer objectRenderer;
+    private Rigidbody2D rigidbody;
 
     private void Start()
     {
         health = maxHealth;
+        objectRenderer = GetComponent<Renderer>();
+        originalColor = objectRenderer.material.color;
+    }
+
+    private void Update()
+    {
+        if (isDead)
+        {
+            rigidbody = GetComponent<Rigidbody2D>();
+
+            rigidbody.gravityScale = 10f;
+        }
     }
     public void recieveDamage(float damage)
     {
         health -= damage;
-
+        StartCoroutine(takeDamageEffect(0.1f, Color.red));
         if (health <= 0)
         {
              health = 0;
@@ -31,6 +46,7 @@ public class EnemyStatus : MonoBehaviour
             animator.SetTrigger("Death");
             isDead = true;
         }
+        
         Component[] components = GetComponents<MonoBehaviour>();
 
         foreach (Component component in components)
@@ -41,12 +57,23 @@ public class EnemyStatus : MonoBehaviour
                 Destroy(component);
             }
         }
-        Invoke("disappear", 2);
+        Invoke("disappear", 1);
         
     }
     void disappear()
     {
         Destroy(gameObject);
+    }
+
+
+    IEnumerator takeDamageEffect(float duration, Color targetColor)
+    {
+
+        objectRenderer.material.color = targetColor;
+
+        yield return new WaitForSeconds(duration);
+
+        objectRenderer.material.color = originalColor;
     }
 
 }

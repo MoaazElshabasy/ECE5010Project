@@ -30,6 +30,11 @@ public class playerMovment : MonoBehaviour
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, rigidBody.velocity.y * 0.5f);
             animator.SetTrigger("Jump");
         }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            StartCoroutine(Teleport());
+            
+        }
 
  
 
@@ -56,5 +61,11 @@ public class playerMovment : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    IEnumerator Teleport() {
+        transform.position = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
+        animator.SetTrigger("Teleport");
+        yield return null;
     }
 }
