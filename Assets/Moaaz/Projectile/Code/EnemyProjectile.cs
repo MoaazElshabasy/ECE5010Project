@@ -9,7 +9,6 @@ public class EnemyProjectile : MonoBehaviour
     public float speed;
     Rigidbody2D Rigidbody;
     public int damage = 25;
-    public GameObject impactEffect;
     public int projectileLife;
 
     void Start()
@@ -26,12 +25,17 @@ public class EnemyProjectile : MonoBehaviour
         if (player != null)
         {
             player.recieveDamage(damage);
+            Destroy(gameObject);
         }
         //Instantiate(impactEffect, transform.position, Quaternion.identity);
         //Debug.Log(hitInfo.name);
 
+        
+
+
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
         Destroy(gameObject);
-
-
     }
 }

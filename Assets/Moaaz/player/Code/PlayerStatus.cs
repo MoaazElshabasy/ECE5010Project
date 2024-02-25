@@ -11,6 +11,7 @@ public class PlayerStatus : MonoBehaviour
     bool isDead = false;
     private Color originalColor;
     private Renderer objectRenderer;
+    public HealthBar healthBar;
 
 
     private void Start()
@@ -18,11 +19,13 @@ public class PlayerStatus : MonoBehaviour
         health = maxHealth;
         objectRenderer = GetComponent<Renderer>();
         originalColor = objectRenderer.material.color;
+        healthBar.setMaxHealth(maxHealth);
     }
     public void recieveDamage(int damage)
     {
         health -= damage;
         animator.SetTrigger("Hurt");
+        healthBar.setHealth(health);
         StartCoroutine(ColorEffect(0.1f, Color.red));
         if (health <= 0)
         {
@@ -34,6 +37,7 @@ public class PlayerStatus : MonoBehaviour
     {
         health += healing;
         StartCoroutine(ColorEffect(0.1f, Color.green));
+        healthBar.setHealth(health);
         if (health > maxHealth)
         {
             health = maxHealth;

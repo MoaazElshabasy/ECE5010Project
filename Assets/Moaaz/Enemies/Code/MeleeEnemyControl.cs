@@ -13,15 +13,19 @@ public class MeleeEnemyControl : MonoBehaviour
     public Animator animator;
     public float AttackRate = 1f;
     private bool inRange;
+    public AudioSource Src;
+    public AudioClip sfx;
 
     void Start()
     {
+        
         player = GameObject.FindGameObjectWithTag("Player").transform;
         thisTransform = transform;
     }
 
     void Update()
     {
+        
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
         if (distanceFromPlayer < lineOfSite && distanceFromPlayer > attackRange)
         {
@@ -31,7 +35,8 @@ public class MeleeEnemyControl : MonoBehaviour
         }
         else if (distanceFromPlayer <= attackRange && nextAttackTime < Time.time)
         {
-            
+            Src.clip = sfx;
+            Src.Play();
             animator.SetBool("Move", false);
             animator.SetTrigger("Attack");
             nextAttackTime = Time.time + AttackRate;

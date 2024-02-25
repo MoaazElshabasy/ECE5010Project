@@ -11,9 +11,12 @@ public class EnemyStatus : MonoBehaviour
     private Color originalColor;
     private Renderer objectRenderer;
     private Rigidbody2D rigidbody;
+    public AudioSource Src;
+    public AudioClip sfx;
 
     private void Start()
     {
+        Src.clip = sfx;
         health = maxHealth;
         objectRenderer = GetComponent<Renderer>();
         originalColor = objectRenderer.material.color;
@@ -21,6 +24,7 @@ public class EnemyStatus : MonoBehaviour
 
     private void Update()
     {
+        
         if (isDead)
         {
             rigidbody = GetComponent<Rigidbody2D>();
@@ -30,6 +34,8 @@ public class EnemyStatus : MonoBehaviour
     }
     public void recieveDamage(float damage)
     {
+        Src.clip = sfx;
+        Src.Play();
         health -= damage;
         StartCoroutine(takeDamageEffect(0.1f, Color.red));
         if (health <= 0)

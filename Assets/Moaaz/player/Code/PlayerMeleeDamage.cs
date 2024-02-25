@@ -30,7 +30,6 @@ public class PlayerMeleeDamage : MonoBehaviour
     {
         foreach (ContactPoint2D contact in collision.contacts)
         {
-            Debug.Log("Hu?");
             if (contact.collider.transform.parent != null && contact.collider.transform.parent.CompareTag("Enemy"))
             {
                 Debug.Log("Hm?");

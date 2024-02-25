@@ -14,6 +14,8 @@ public class RangeEnemyControl : MonoBehaviour
     public float AttackRate = 0.5f;
     public GameObject BulletObject;
     public GameObject BulletCoordinates;
+    public AudioSource Src;
+    public AudioClip sfx;
 
     void Start()
     {
@@ -31,6 +33,8 @@ public class RangeEnemyControl : MonoBehaviour
         }
         else if (distanceFromPlayer <= attackRange && nextAttackTime < Time.time)
         {
+            Src.clip = sfx;
+            Src.Play();
             animator.SetBool("Move", false);
             animator.SetTrigger("Attack");
             nextAttackTime = Time.time + AttackRate;
