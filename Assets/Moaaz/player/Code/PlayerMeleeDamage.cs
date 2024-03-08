@@ -32,12 +32,12 @@ public class PlayerMeleeDamage : MonoBehaviour
         {
             if (contact.collider.transform.parent != null && contact.collider.transform.parent.CompareTag("Enemy"))
             {
-                Debug.Log("Hm?");
                 GameObject enemy = contact.collider.transform.parent.gameObject;
                 EnemyStatus enemyStatus = enemy.GetComponent<EnemyStatus>();
                 if (enemyStatus != null)
                 {
                     enemyStatus.recieveDamage(finalDamage);
+                    finalDamage = 0;
                 }
             }
         }

@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Moaaz/Main Menu.unity
     guid: 226227cbb8f8067499753a410f6c0f73
   - enabled: 1
-    path: Assets/Moaaz/Test Scene.unity
-    guid: 08deeb742649fa746b5df65a9d30e415
+    path: Assets/Moaaz/Tutorial.unity
+    guid: 75225ff68cc0b544da11d47abac3fa8b
   m_configObjects: {}

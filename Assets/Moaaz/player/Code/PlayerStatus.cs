@@ -1,7 +1,9 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStatus : MonoBehaviour
 {
@@ -13,9 +15,13 @@ public class PlayerStatus : MonoBehaviour
     private Renderer objectRenderer;
     public HealthBar healthBar;
 
+    public UnityEngine.UI.Image popUpMessage;
+
+
 
     private void Start()
     {
+        popUpMessage.gameObject.SetActive(false);
         health = maxHealth;
         objectRenderer = GetComponent<Renderer>();
         originalColor = objectRenderer.material.color;
@@ -52,7 +58,7 @@ public class PlayerStatus : MonoBehaviour
             isDead = true;
         }
         Component[] components = GetComponents<MonoBehaviour>();
-
+        popUpMessage.gameObject.SetActive(true);
         foreach (Component component in components)
         {
 
