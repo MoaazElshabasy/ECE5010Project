@@ -19,17 +19,22 @@ public class BossControl : MonoBehaviour
     public GameObject BulletCoordinates2;
     public Animator animator;
     private EnemyStatus enemyStatus;
-
+    public AudioSource Src;
+    public AudioClip sfx;
     void Start()
     {
+        
         enemyStatus = GetComponent<EnemyStatus>();
         initialHealth = enemyStatus.maxHealth;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         thisTransform = transform;
+
     }
 
     void Update()
     {
+        
+
         Flip();
         if (isHit)
         {
@@ -57,6 +62,9 @@ public class BossControl : MonoBehaviour
             initialHealth = enemyStatus.health;
             isHit = true;
         }
+
+
+        
     }
 
     void TeleportBoss()
@@ -70,18 +78,21 @@ public class BossControl : MonoBehaviour
 
     void SpawnRandomObject()
     {
+        Src.clip = sfx;
+        Src.Play();
         if (objectsToInstantiate.Length > 0)
         {
             int random = Random.Range(0, 3);
             int randomIndex = Random.Range(0, objectsToInstantiate.Length);
             GameObject obj = objectsToInstantiate[randomIndex];
-            if (random == 3)
+            if (random == 0)
             {
                 Instantiate(obj, BulletCoordinates.transform.position, BulletCoordinates.transform.rotation);
             }
-            else if (random == 3)
+            else if (random == 1)
             {
                 Instantiate(obj, BulletCoordinates.transform.position, BulletCoordinates.transform.rotation);
+                Instantiate(obj, BulletCoordinates1.transform.position, BulletCoordinates2.transform.rotation);
             } 
             else
             {

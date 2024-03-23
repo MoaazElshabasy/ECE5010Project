@@ -14,6 +14,8 @@ public class HealingStatue : MonoBehaviour
     public PlayerStatus status;
     public int healing;
     public float animationDuration = 1f;
+    public AudioSource Src;
+    public AudioClip sfx;
     private void Start()
     {
         popUpText.enabled = false;
@@ -50,6 +52,8 @@ public class HealingStatue : MonoBehaviour
         status.recieveHealing(healing);
         popUpText.enabled = false;
         animator.SetTrigger("Destroy");
+        Src.clip = sfx;
+        Src.Play();
         Invoke("Disappear", animationDuration);
     }
 

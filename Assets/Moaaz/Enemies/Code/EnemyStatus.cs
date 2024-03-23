@@ -38,7 +38,7 @@ public class EnemyStatus : MonoBehaviour
         if (damage > 0)
         {
             Src.clip = sfx;
-            //Src.Play();
+            Src.Play();
             health -= damage;
             StartCoroutine(takeDamageEffect(0.1f, Color.red));
         }

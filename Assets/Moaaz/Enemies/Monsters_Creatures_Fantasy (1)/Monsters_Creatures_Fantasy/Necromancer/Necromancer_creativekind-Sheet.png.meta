@@ -1650,7 +1650,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Necromancer_creativekind-Sheet_18: 296983224
       Necromancer_creativekind-Sheet_22: 891064228
       Necromancer_creativekind-Sheet_49: 1020444461
       Necromancer_creativekind-Sheet_35: 818928553
@@ -1721,7 +1720,6 @@ TextureImporter:
       Necromancer_creativekind-Sheet_31: 1295310390
       Necromancer_creativekind-Sheet_15: -1196336055
       Necromancer_creativekind-Sheet_24: -1357829750
-      Necromancer_creativekind-Sheet_71: 356129583
       Necromancer_creativekind-Sheet_2: 394463779
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

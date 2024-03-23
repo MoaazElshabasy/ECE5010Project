@@ -7,7 +7,7 @@ public class DarkenSpriteOnKeyPress : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bool isChasmReality = false;
     private Color originalColor;
-    private Color darkenedColor = new Color(0.2f, 0.2f, 0.2f);
+    private Color darkenedColor = new Color(0.3f, 0.3f, 0.3f);
 
     void Start()
     {
