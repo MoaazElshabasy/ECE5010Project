@@ -10741,7 +10741,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000038363, y: -345}
+  m_AnchoredPosition: {x: 0.000038363, y: -415}
   m_SizeDelta: {x: 836.77, y: 95.204}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &737605233
@@ -10891,7 +10891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 719c72c8b469cd84d96abb384ea81ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2000
+  maxHealth: 1500
   health: 0
   animator: {fileID: 739919861}
   Src: {fileID: 328226377}
@@ -24128,6 +24128,7 @@ MonoBehaviour:
   speed: 20
   target: {fileID: 1893651603}
   yOffset: 6
+  shakeMagnitude: 0.1
 --- !u!81 &1805651432
 AudioListener:
   m_ObjectHideFlags: 0
